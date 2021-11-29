@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="lesite" translate="label">
+            <label>LeSite</label>
+        </tab>
+        <section id="custom_bar" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label">
+            <label>Custom Bar</label>
+            <tab>lesite</tab>
+            <resource>LeSite_CustomBar::custom_bar</resource>
+            <group id="custom_bar_config" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label">
+                <label>Settings</label>
+                <field id="enable" translate="label" type="select" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10">
+                    <label>Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <config_path>lesite/custombar/enable</config_path>
+                </field>
+                <field id="content_notloggedin" translate="label" type="textarea" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="20">
+                    <label>Customer Group - Not Logged In:</label>
+                    <config_path>lesite/custombar_notloggedin/content</config_path>
+                </field>
+                <field id="content_loggedin" translate="label" type="textarea" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="20">
+                    <label>Customer Group - Logged In:</label>
+                    <config_path>lesite/custombar_loggedin/content</config_path>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
